@@ -25,5 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', views.register, name="register_url"),
     path('login/', LoginView.as_view(), name='login'),
-    path('loggedIn', views.loggedIn, name='loggedIn'),
+    path('loggedIn/', views.loggedIn, name='loggedIn'),
+    path('guest/', views.guest, name='guest'),
+    path('guestdata', views.process_guest, name='guest-fun'),
 ]
