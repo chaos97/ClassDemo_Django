@@ -7,7 +7,10 @@
 <body>
 <h1>Welcome to my website!</h1>
 Today is {{ date }} <br>
-<a href={% url 'login_url' %}>Login</a><br>
+{% for p in persons %}
+Name:{{ p.0 }};    City:{{ p.1 }}<br>
+{% endfor %}
+<a href={% url 'login' %}>Login</a><br>
 <a href={% url 'register_url' %}>Register</a><br>
 </body>
 </html>
