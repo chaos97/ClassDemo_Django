@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class AppUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.PROTECT)
     points = models.IntegerField(default=0)
@@ -25,7 +26,7 @@ class Packages(models.Model):
 
 
 class Bids(models.Model):
-    user = models.ForeignKey(AppUser,on_delete=models.PROTECT)
+    user = models.ForeignKey(AppUser, on_delete=models.PROTECT)
     package = models.CharField(max_length = 3)
     bid = models.IntegerField()
 
